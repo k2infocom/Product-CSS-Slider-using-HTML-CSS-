@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Card Website</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font awesome cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- swiper slider cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/10.3.1/swiper-bundle.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <a href="#">Shop</a>
+            </div>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+        <div class="main-page">
+            <div class="info">
+                <h4>Try Noise Watch</h4>
+                <h1>A Deal with Time</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Repellat accusantium nesciunt sequi officiis! Nesciunt quis eaque molestiae commodi?</p>
+                <button>Shop Now</button>
+            </div>
+            <div class="images swiper">
+                <div class="swiper-wrapper">
+                    <div class="image swiper-slide">
+                        <img src="images/black-watch.png" alt="">
+                    </div>
+                    <div class="image swiper-slide">
+                        <img src="images/blackGold watch.png" alt="">
+                    </div>
+                    <div class="image swiper-slide">
+                        <img src="images/blue watch.png" alt="">
+                    </div>
+                    <div class="image swiper-slide">
+                        <img src="images/lightPink-watch.png" alt="">
+                    </div>
+                    <div class="image swiper-slide">
+                        <img src="images/Maroon watch.png" alt="">
+                    </div>
+                </div>
+                <i class="fa-solid fa-chevron-left"></i>
+                <i class="fa-solid fa-chevron-right"></i>
+            </div>
+        </div>
+    </div>
+    <!-- swiper slider js cdn  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/10.3.1/swiper-bundle.min.js"></script>
+
+    <script>
+
+        // Elements 
+
+        let btn = document.querySelector("button");
+        let container = document.querySelector(".container");
+        let h4 = document.querySelector(".info h4");
+        let p = document.querySelector(".info p");
+        let h1 = document.querySelector(".info h1");
+        let anchor_tags = document.querySelectorAll(".header ul li a");
+        let logo = document.querySelector(".logo a");
+
+        
+
+
+
+
+
+
+
+
+        const swiper = new Swiper(".swiper",{
+            navigation: {
+                nextEl:".fa-chevron-right",
+                prevEl:".fa-chevron-left",
+            },
+            autoplay:{
+                delay:2000
+            },
+            on:{
+                slideChange:function(){
+                    const index = this.realIndex +1 ;
+                    if(index==1){
+                        container.style.background="rgb(36,36,36)";
+                        container.style.background="linear-gradient(168deg,#232526,#414345)";
+
+                        //btn
+
+                        btn.style.color="#1c1c1c"
+                        btn.style.backgroundColor="#fff"
+                        btn.style.borderColor="#fff"
+                        // texts
+                        anchor_tags.forEach(anchor_tag=>{
+                            anchor_tag.style.color="#fff"
+                        })
+                        logo.style.color="#fff"
+                        h1.style.color="#fff"
+                        p.style.color="#fff"
+                        h4.style.color="#fff"
+                    }
+                    if(index==2){
+                        container.style.background="linear-gradient(172deg,rgba(255,247,199,1),rgba(255,231,97,1))";
+
+                        //btn
+                        btn.style.color="rgba(253,236,151,0.8)"
+                        btn.style.backgroundColor="#1c1c1c"
+                        btn.style.borderColor="#1c1c1c"
+                        // texts
+                        anchor_tags.forEach(anchor_tag=>{
+                            anchor_tag.style.color="#1c1c1c"
+                        })
+                        logo.style.color="#1c1c1c"
+                        h1.style.color="#1c1c1c"
+                        p.style.color="#1c1c1c"
+                        h4.style.color="#1c1c1c"
+                    }
+                    if(index==3){
+                        container.style.background="linear-gradient(152deg,rgba(0,119,182,1),rgba(8,24,68,1))";
+
+                        //btn
+                        btn.style.color="rgba(8,24,68,1)"
+                        btn.style.backgroundColor="#fff"
+                        btn.style.borderColor="#fff"
+                        // texts
+                        anchor_tags.forEach(anchor_tag=>{
+                            anchor_tag.style.color="#fff"
+                        })
+                        logo.style.color="#fff"
+                        h1.style.color="#fff"
+                        p.style.color="#fff"
+                        h4.style.color="#fff"
+                    }
+                    if(index==4){
+                        container.style.background="#ebba98";
+                        container.style.background="linear-gradient(172deg,rgba(255,204,177,1),rgba(255,168,122,1))";
+
+                        //btn
+                        btn.style.color="#fbba98"
+                        btn.style.backgroundColor="#1c1c1c"
+                        btn.style.borderColor="#1c1c1c"
+                        // texts
+                        anchor_tags.forEach(anchor_tag=>{
+                            anchor_tag.style.color="#1c1c1c"
+                        })
+                        logo.style.color="#1c1c1c"
+                        h1.style.color="#1c1c1c"
+                        p.style.color="#1c1c1c"
+                        h4.style.color="#1c1c1c"
+                    }
+                    if(index==5){
+                        container.style.background="#eb9a6e";
+                        container.style.background="linear-gradient(172deg,rgba(223,100,128,1),rgba(142,30,56,1))";
+
+                        //btn
+                        btn.style.color="#rgb(142,30,56)"
+                        btn.style.backgroundColor="#1c1c1c"
+                        btn.style.borderColor="#1c1c1c"
+                        // texts
+                        anchor_tags.forEach(anchor_tag=>{
+                            anchor_tag.style.color="#fff"
+                        })
+                        logo.style.color="#fff"
+                        h1.style.color="#fff"
+                        p.style.color="#fff"
+                        h4.style.color="#fff"
+                    }
+                    
+                }
+            }
+            
+            
+        })
+
+
+
+    </script>
+</body>
+
+</html>
